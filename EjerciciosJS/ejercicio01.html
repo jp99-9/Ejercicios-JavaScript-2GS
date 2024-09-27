@@ -8,14 +8,21 @@
 </head>
 <body>
 
-    <span class="material-symbols-outlined">
-        mail
-        </span>
+    <img id="sobre" src="/Ejercicios-JavaScript-2GS/imgs/sobre cerrado.avif" alt="">
 
-    <p>Haz click para abrir y cerrar el sobre</p>
+    <p onclick="abrir_sobre()">Haz click para abrir y cerrar el sobre</p>
 
     <script>
-        
+        function abrir_sobre(){
+            var sobres = document.getElementById("sobre");
+           if(sobres.src.includes("cerrado")){
+             sobres.src="/Ejercicios-JavaScript-2GS/imgs/sobre abierto.jpeg"
+           }else{
+             sobres.src="/Ejercicios-JavaScript-2GS/imgs/sobre cerrado.avif"
+           }
+        } 
+
+
     </script>
 </body>
 </html>

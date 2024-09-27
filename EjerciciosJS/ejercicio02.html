@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercico 2</title>
+</head>
+<body>
+    <h1>Validacion de datos</h1>
+    <form>
+        <label for="numero">Escribe un numero del 1 al 10</label><br>
+        <input type="text" name="numero" id="respuesta"><br>
+        <input type="submit" value="Submit" id="boton">
+    </form>
+    <p id=""></p>
+
+    <script>
+        let boton = document.getElementById("boton");
+        boton.onclick = validar;
+
+        function validar(){
+            let x = document.getElementById("respuesta").value;
+        }
+    </script>
+</body>
+</html>
