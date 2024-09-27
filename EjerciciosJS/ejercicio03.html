@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <h1>Ecuación primer grado</h1>
+    <p>Introduce los coeficientes de la ecuación</p>
+    <input id="input1" type="text">X+ <input type="text"  id="input2">=0
+
+    <p id="resultado"></p>
+
+    <button id="boton" type="button">Calcular</button>
+
+    <script>
+       
+
+        let boton = document.getElementById("boton");
+
+        boton.onclick = calcular;
+        
+        function calcular(){
+            let num1  = document.getElementById("input1").value;
+            let num2 = document.getElementById("input2").value;
+            let x;
+            x = (num2 * -1)/num1;
+            document.getElementById("resultado").innerHTML = "Resultado:" + x;
+
+        }
+    </script>
+</body> 
+</html>

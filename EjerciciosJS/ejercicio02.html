@@ -7,12 +7,13 @@
 </head>
 <body>
     <h1>Validacion de datos</h1>
-    <form>
-        <label for="numero">Escribe un numero del 1 al 10</label><br>
-        <input type="text" name="numero" id="respuesta"><br>
-        <input type="submit" value="Submit" id="boton">
-    </form>
-    <p id=""></p>
+    <p>Escribe un numero entre 1 y 10:</p>
+
+    <input id="respuesta">
+    
+    <button id="boton" type="button">Submit</button>
+    
+    <p id="frase"></p>
 
     <script>
         let boton = document.getElementById("boton");
@@ -20,6 +21,14 @@
 
         function validar(){
             let x = document.getElementById("respuesta").value;
+            let text;
+            if(x > 1 && x<11){
+                text = "Valid"
+            }else{
+                text = "No valid";
+            }
+
+            document.getElementById("frase").innerHTML = text;
         }
     </script>
 </body>
