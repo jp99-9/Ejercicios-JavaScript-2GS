@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+
+<body>
+    <p>Introduce un email</p><input type="text" id="text">
+
+    <button id="boton" type="button">Enviar</button>
+
+    <p id="parrafo1"></p>
+    <p id="parrafo2"></p>
+
+    <script>
+        let boton = document.getElementById("boton");
+        boton.onclick = separar;
+
+        function separar() {
+            let text = document.getElementById("text").value;
+            let index = text.indexOf("@");
+
+            let part1 = text.slice(0,index);
+            let part2 = text.slice(index+1);
+
+            document.getElementById("parrafo1").innerHTML = "L'usuari és: " + part1;
+            document.getElementById("parrafo2").innerHTML = "El domini és: " + part2;
+
+
+        }
+
+    </script>
+</body>
+
+</html>
