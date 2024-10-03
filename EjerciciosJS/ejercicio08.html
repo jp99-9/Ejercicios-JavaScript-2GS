@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 08</title>
+</head>
+<body>
+    <p id ="texto">The reference contains description and examples of all string properties and methodes.</p>
+
+    <button type="button" id="boton">Submit</button>
+
+    <p id="part1"></p>
+    <p id="part2"></p>
+
+    <script>
+        let boton = document.getElementById("boton");
+        boton.onclick = separar;
+
+        function separar(){
+
+            let text = document.getElementById("texto").innerText;
+            let parte1 = text.slice(0,text.length/2);
+            let parte2 = text.slice(text.length/2);
+
+            document.getElementById("part1").innerHTML = parte1;
+            document.getElementById("part2").innerHTML = parte2;
+        }
+    </script>
+    
+</body>
+</html>
